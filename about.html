@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width , initial-scale=1.0">
+	<title>About us</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<div class="navbar">
+		<div class="logo">
+			<a href="index.html"><img src="/Images/logo.png" width="125px"></a>
+		</div>
+		<nav>
+			<ul id="MenuItems">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="allguns.html">All-Guns</a></li>
+				<li><a href="about.html">About</a></li>
+                
+        <!--------Login, Sign-up and Help--------->
+
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign-up</a></li> 
+                <li><a href="contact.html">Contact Us</a></li>
+			</ul>
+		</nav>
+		<img src="/Images/helmet.png" width="30px" height="30px">
+		<img src="/Images/menu.png" class="menu-icon" onclick="menutoggle()">
+	</div>
+	</div>
+
+      <!--------Login, Sign-up and Help pop-ups--------->
+    
+    <div class="popup-overlay"></div>
+        <div class="popup">
+            <div class="popup-close" onclick="closeLoginForm()">&times;</div>
+                <div class="form">
+                    <div class="avatar">
+                         <img src="/Images/minilogo.png" alt="">
+                    </div>
+                    <div class="header">
+                          LogIn
+                    </div>
+                    <div class="element">
+                         <label for="username">Email</label>
+                         <input type="text" id="username" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+                    </div>
+                    <div class="element">
+                          <label for="password">Password</label>
+                          <input type="password" id="password" required>
+                    </div>
+                    <div class="element">
+                          <button id="login">Login</button>
+                    </div>
+                    <div class="element login-element">
+                        <b onclick="HandleRegForm()" >Register</b>
+                        <b style="padding-left: 180px;" onclick="PassForm()">Forgot Password</b>
+                  </div>
+                </div>
+        </div>
+
+
+        <div class="popup-overlay-reg"></div>
+        <div class="popup-reg">
+            <div class="popup-close-reg" onclick="closeRegForm()">&times;</div>
+                <div class="form">
+                    <div class="avatar">
+                         <img src="/Images/minilogo.png" alt="">
+                    </div>
+                    <div class="header-reg">
+                          Register
+                    </div>
+                    <div class="element-reg">
+                         <label for="username">Email</label>
+                         <input type="text" id="emailreg" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+                    </div>
+                    <div class="element-reg">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="element-reg">
+                        <label for="mobile">Mobile No</label>
+                        <input type="tel" id="mob" required>
+                    </div>
+                    <div class="element-reg">
+                          <label for="password">Password</label>
+                          <input type="password" id="password-reg" required>
+                    </div>
+                    <div class="element-reg">
+                          <button id="register">Register</button>
+                    </div>
+                    <div class="element-reg">
+                        <b onclick="HandleLoginForm()">LogIn</b>
+                        <b style="padding-left: 197px;" onclick="PassForm()">Forgot Password</b>
+                    </div>
+                </div>
+        </div>
+
+        <div class="popup-overlay-help"></div>
+        <div class="popup-help">
+            <div class="popup-close-help" onclick="closeHelpForm()">&times;</div>
+                <div class="form">
+                    <div class="avatar">
+                         <img src="/Images/minilogo.png" alt="">
+                    </div>
+                    <div class="header-help">
+                          Query Form
+                    </div>
+                    <div class="element-help">
+                         <label for="username">Email</label>
+                         <input type="text" id="emailhelp" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+                    </div>
+                    <div class="element-help">
+                          <label for="password">Password</label>
+                          <input type="password" id="password-help" required>
+                    </div>
+                    <div class="element-help">
+                        <label for="subject">Subject</label>
+                        <textarea id="query" name="Query" placeholder="Write your Query here.." style="height:100px; width: 100%;"></textarea>
+                    </div>
+
+                    <div class="element-help">
+                          <button id="helpbtn">Send Query</button>
+                    </div>
+                </div>
+        </div>
+
+
+        <div class="popup-overlay-forgot-pass"></div>
+        <div class="popup-forgot-pass">
+            <div class="popup-close" onclick="closePassForm()">&times;</div>
+                <div class="form">
+                    <div class="avatar">
+                         <img src="/Images/minilogo.png" alt="">
+                    </div>
+                    <div class="header-forgot-pass">
+                          Forgot Password??
+                    </div>
+                    <div class="element-forgot-pass">
+                         <label for="Email">Enter Email</label>
+                         <input type="text" id="forgotpass">
+                    </div>
+                    <div class="element-forgot-pass">
+                          <button id="passreset">Send Reset Link</button>
+                    </div>
+                </div>
+        </div>
+        
+<!--------------------------------------------->
+
+
+	<!-- --------------- About page------------>
+	<div class="account-page">
+		<div class="container">
+			<div class="row">
+				<div class="col-2">
+          <h1>ABOUT US..</h1>
+				  <p>
+          PlayerUnknown's Battlegrounds (PUBG) is an online multiplayer battle royale game developed and published by PUBG Corporation, a subsidiary of South Korean video game company Bluehole. The game is based on previous mods that were created by Brendan "PlayerUnknown" Greene for other games, inspired by the 2000 Japanese film Battle Royale, and expanded into a standalone game under Greene's creative direction. In the game, up to one hundred players parachute onto an island and scavenge for weapons and equipment to kill others while avoiding getting killed themselves. The available safe area of the game's map decreases in size over time, directing surviving players into tighter areas to force encounters. The last player or team standing wins the round.<br><br>
+
+          Battlegrounds was first released for Microsoft Windows via Steam's early access beta program in March 2017, with a full release in December 2017. The game was also released by Microsoft Studios for the Xbox One via its Xbox Game Preview program that same month, and officially released in September 2018. A free-to-play mobile version for Android and iOS was released in 2018, in addition to a port for the PlayStation 4. A version for the Stadia streaming platform was released in April 2020. Battlegrounds is one of the best-selling and most-played video games of all time. The game had sold over 70 million copies by 2020, with PUBG Mobile having been downloaded over 600 million times.<br><br>
+
+          Battlegrounds received positive reviews from critics, who found that while the game had some technical flaws, it presented new types of gameplay that could be easily approached by players of any skill level and was highly replayable. The game was attributed to popularizing the battle royale genre, with a number of unofficial Chinese clones also being produced following its success. The game also received several Game of the Year nominations, among other accolades. PUBG Corporation has run several small tournaments and introduced in-game tools to help with broadcasting the game to spectators, as they wish for it to become a popular esport. The game has also been banned in some countries for allegedly being harmful and addictive to younger players.
+          </p>
+			  </div>
+        <div class="col-2">
+					<img src="/Images/pubg.png" width="100%">
+				</div>
+		</div>
+	</div>
+	</div>
+	
+<!----------------------Footer ------------------------------>
+<div class="footer">
+	<div class="container">
+		<div class="row">
+			<div>
+        <h3>Player Unknown's Battle Grounds</h3>
+				<p>Now on your mobile</p>
+        <br>
+				<img src="/Images/logo1.png">
+        <img src="/Images/logo2.png">
+        <img src="/Images/logo3.png">
+			</div>
+			<div class="footer-col-3">
+				<h3>Also play PUBG on</h3>
+				<ul>
+					<li>XBOX one</li>
+					<li>PS4</li>
+					<li>PC</li>
+					<li>MOBILE</li>
+				</ul>
+			</div>
+			<div class="footer-col-4">
+				<h3>Follow Us</h3>
+			  <ul>
+          <li>Twitter</li>
+					<li>Youtube</li>
+					<li>Facebook</li>
+					<li>Instagram</li>
+				</ul>
+			</div>
+		</div>
+		<hr>
+		<p class="copyright">ⓒ 2018-2020 PUBG CORPORATION. All rights reserved.<br>ⓒ 2018-2020 Tencent. All rights reserved.<br>Privacy Policy | Tencent Games User Agreement</p>
+	</div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
